@@ -1,0 +1,43 @@
+body{
+    margin: 20px 400px;
+     
+}
+.container{
+    border: 1px solid rgb(246, 113, 246);
+    text-align: center;
+    width: 600px;
+    height: 300px;
+    padding: 40px;
+    background-image: linear-gradient(to bottom right, rgb(177, 113, 177), rgb(245, 172, 117), rgb(160, 236, 141));
+}
+ 
+.container h1{
+    color: rgb(233, 233, 128);
+    font-size: 50px;
+    font-family: 'Pacifico', cursive;  
+    animation: text 5s ease-in-out infinite;
+}
+@keyframes text {
+    0%{background-position: 0% 50%; color: bisque;}
+    50%{background-position: 25% 75%; color: rgb(228, 80, 31);}
+    100%{background-position: 100% 50%; color: yellow;}
+     
+}
+.container h3{
+    color: cyan;
+    animation-direction: alternate-reverse;
+    font-family: 'Pacifico', cursive;  
+    text-shadow: 2px 4px 8px plum;
+    margin-top: 40px;
+    font-style: italic;
+    font-size: 2em;
+    animation: wish 5s ease-in-out infinite;
+}
+@keyframes wish {
+    0%{color: yellow ; background-position: 0% 25%;}
+    25%{color: tomato ; background-position: 50% 25%;}
+    50%{color: rgb(61, 186, 54) ;}
+    75%{color: rgb(73, 117, 247) ; background-position: 50% 75%;}
+    100%{color: rgb(123, 40, 65) ; background-position: 50% 100%;}
+    
+}
