@@ -47,9 +47,13 @@ async function run() {
     app.get('/colleges', async (req, res) => {
         let query = {};
         if (req?.query.email) {
-          query = { student_email: req.query.email }
+          query = { email: req.query.email }
         }
-  
+        if(req?.query?.collegeName){
+            // { collegeName: { $regex: new RegExp(collegeName, 'i') } }
+            // const collegeName = req
+            query = { collegeName: { $regex: new RegExp(req.query.collegeName, 'i') } }
+        }
         const result = await  collegeCollections.find(query).toArray();
        
         res.send(result)
